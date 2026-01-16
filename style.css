@@ -4,25 +4,20 @@
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
-}
-
 body{
-    min-height: 100dvh;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    font-family: 'Hanken Grotesk', sans-serif;
-    
+     min-height: 100vh;
+  font-family: 'Hanken Grotesk', sans-serif;
+  background-color: hsl(221, 100%, 96%);
 }
-
 .card{
     
-    width: 100%;
-    display: grid;
-    grid-template-rows: auto auto;
-    background: white;
+   width: 100%;
+  min-height: 100vh;   /* fallback */
+  min-height: 100dvh; /* real mobile height */
+
+  display: grid;
+  grid-template-rows: auto auto;
+  background: white;
 }
 
    
@@ -35,7 +30,7 @@ background: linear-gradient(to bottom,
     );
     color:hsl(0, 0%, 100%);
     padding: 20px;
-    height: max-content;
+    
 }
 #para1{
     text-align: center;
@@ -173,8 +168,185 @@ button{
     min-height: 56px;
     height: auto;
     padding: 0.75rem 1rem;
+        border-radius: 6vh;
 }
 button:hover {
      
        background: linear-gradient(to bottom, hsla(252, 100%, 67%,1), hsla(241, 81%, 54%,1));
+}
+/*descktop view*/
+
+@media (min-width: 768px){
+     main {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+    .card {
+        min-height: unset;   
+    height: auto;       
+    width: 70vw;
+        min-width: 40%;
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+        
+    }
+      .result {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding-bottom: 0;
+    border-radius: 20px;
+  }
+
+  .result .score {
+    margin: 1.5rem auto 0; 
+  }
+
+  .result .result-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    align-items: center;      
+    flex: 1;                  
+    gap: 10px;    
+    margin: 2rem 0rem;            
+  }
+.result-text h3{
+   font-size: 25px;
+}
+    
+    .result #para1{
+        margin: 1rem 0rem 1.5rem 0rem;
+    }
+    
+   
+    .summary{
+        align-items: center;
+        flex: 1;
+    }
+   button {
+    font-size: 14px;
+        padding: 0;
+        min-height: 50px;
+}
+}
+@media (min-width: 1024px){
+     main {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+    .card {
+        min-height: unset;   
+    height: auto;       
+           width: 30vw;
+        min-width: 38%;
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+        
+    }
+      .result {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding-bottom: 0;
+    border-radius: 20px;
+  }
+
+  .result .score {
+    margin: 1.5rem auto 0; 
+  }
+
+  .result .result-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    align-items: center;      
+    flex: 1;                  
+    gap: 10px;    
+    margin: 2rem 0rem;            
+  }
+.result-text h3{
+   font-size: 25px;
+}
+    
+    .result #para1{
+        margin: 1rem 0rem 1.5rem 0rem;
+    }
+    
+   
+    .summary{
+        align-items: center;
+        flex: 1;
+    }
+   button {
+    font-size: 14px;
+        padding: 0;
+        min-height: 50px;
+}
+}
+@media (min-width: 1279px){
+     main {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+    .card {
+        min-height: unset;   
+    height: auto;       
+           width: 30vw;
+        min-width: 38%;
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+        
+    }
+      .result {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding-bottom: 0;
+    border-radius: 20px;
+  }
+
+  .result .score {
+    margin: 1.5rem auto 0; 
+  }
+
+  .result .result-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    align-items: center;      
+    flex: 1;                  
+    gap: 10px;    
+    margin: 2rem 0rem;            
+  }
+.result-text h3{
+   font-size: 25px;
+}
+    
+    .result #para1{
+        margin: 1rem 0rem 1.5rem 0rem;
+    }
+    
+   
+    .summary{
+        align-items: center;
+        flex: 1;
+    }
+   button {
+    font-size: 14px;
+        padding: 0;
+        min-height: 50px;
+}
 }
